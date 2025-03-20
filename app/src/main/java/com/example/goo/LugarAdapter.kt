@@ -7,7 +7,7 @@ import com.example.goo.databinding.ItemLugarBinding
 class LugarAdapter(private val lugares: List<Lugar>, private val onItemClick: (Lugar) -> Unit) :
     RecyclerView.Adapter<LugarAdapter.LugarViewHolder>() {
 
-    class LugarViewHolder(val binding: ItemLugarBinding) : RecyclerView.ViewHolder(binding.root)
+    class LugarViewHolder(val binding: ItemLugarBinding) : RecyclerView.ViewHolder(binding.cardView)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LugarViewHolder {
         val binding = ItemLugarBinding.inflate(LayoutInflater.from(parent.context), parent, false)
