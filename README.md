@@ -1,4 +1,4 @@
-# Nombre del proyecto "Goo"
+# Goo
 Es una aplicacion que te muestra lugares para ir de turismo
 
 #Tecnologias utilizadas
