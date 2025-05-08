@@ -10,110 +10,144 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imagenDetalle"
-            android:layout_width="0dp"
-            android:layout_height="250dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+
 
         <TextView
             android:id="@+id/nombreDetalle"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imagenDetalle" />
+            tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/ubicacionLabel"
+            android:id="@+id/rotacionLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="Ubicación:"
+            android:text="Periodo de Rotacion:"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nombreDetalle" />
 
         <TextView
-            android:id="@+id/ubicacionDetalle"
+            android:id="@+id/rotacionDetalle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ubicacionLabel"
-            app:layout_constraintTop_toTopOf="@+id/ubicacionLabel" />
-
+            app:layout_constraintStart_toEndOf="@+id/rotacionLabel"
+            app:layout_constraintTop_toTopOf="@+id/rotacionLabel" />
         <TextView
-            android:id="@+id/temporadaLabel"
+            android:id="@+id/orbitaLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="Mejor temporada:"
+            android:text="Periodo de Rotacion:"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ubicacionDetalle" />
+            app:layout_constraintTop_toBottomOf="@+id/rotacionDetalle" />
 
         <TextView
-            android:id="@+id/temporadaDetalle"
+            android:id="@+id/orbitaDetalle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/temporadaLabel"
-            app:layout_constraintTop_toTopOf="@+id/temporadaLabel" />
+            app:layout_constraintStart_toEndOf="@+id/orbitaLabel"
+            app:layout_constraintTop_toTopOf="@+id/orbitaLabel" />
 
         <TextView
-            android:id="@+id/costoLabel"
+            android:id="@+id/climaLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="Costo promedio:"
+            android:text="Clima:"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/temporadaDetalle" />
+            app:layout_constraintTop_toBottomOf="@+id/orbitaDetalle" />
 
         <TextView
-            android:id="@+id/costoDetalle"
+            android:id="@+id/climaDetalle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/costoLabel"
-            app:layout_constraintTop_toTopOf="@+id/costoLabel" />
+            app:layout_constraintStart_toEndOf="@+id/climaLabel"
+            app:layout_constraintTop_toTopOf="@+id/climaLabel" />
 
         <TextView
-            android:id="@+id/descripcionLabel"
+            android:id="@+id/gravedadLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Gravedad:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/climaDetalle" />
+
+        <TextView
+            android:id="@+id/gravedadDetalle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gravedadLabel"
+            app:layout_constraintTop_toTopOf="@+id/gravedadLabel" />
+
+        <TextView
+            android:id="@+id/terrenoLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
-            android:text="Descripción:"
+            android:text="Terreno:"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/costoDetalle" />
+            app:layout_constraintTop_toBottomOf="@+id/gravedadDetalle" />
 
         <TextView
-            android:id="@+id/descripcionDetalle"
+            android:id="@+id/terrenoDetalle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/descripcionLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/terrenoLabel" />
+        <TextView
+            android:id="@+id/poblacionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Poblacion:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/terrenoDetalle" />
+
+        <TextView
+            android:id="@+id/poblacionDetalle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/poblacionLabel" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

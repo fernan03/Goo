@@ -1,6 +1,7 @@
 package com.example.goo
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,25 +17,20 @@ class DetalleActivity : AppCompatActivity() {
         binding = ActivityDetalleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val lugarId = intent.getIntExtra("LUGAR_ID", -1)
-        if (lugarId != -1) {
-            mostrarDetalleLugar(lugarId)
-        } else {
-            finish()
+        val planeta = intent.getParcelableExtra<Lugar>("LUGAR_ID")
+        if(planeta !=null){
+            findViewById<TextView>(R.id.nombreDetalle).text = planeta.id
+            findViewById<TextView>(R.id.rotacionDetalle).text = planeta.rotacion
+            findViewById<TextView>(R.id.orbitaDetalle).text = planeta.orbita
+            findViewById<TextView>(R.id.climaDetalle).text = planeta.clima
+            findViewById<TextView>(R.id.gravedadDetalle).text = planeta.gravedad
+            findViewById<TextView>(R.id.terrenoDetalle).text = planeta.terreno
+            findViewById<TextView>(R.id.poblacionDetalle).text = planeta.poblacion
+
+
         }
+
     }
 
-    private fun mostrarDetalleLugar(lugarId: Int) {
-        val lugar = DatosLugares.lugares.find { it.id == lugarId }
-        lugar?.let {
-            binding.apply {
-                nombreDetalle.text = it.nombre
-                imagenDetalle.setImageResource(it.imagenResId)
-                ubicacionDetalle.text = it.ubicacion
-                temporadaDetalle.text = it.mejorTemporada
-                costoDetalle.text = it.costoPromedio
-                descripcionDetalle.text = it.descripcionCompleta
-            }
-        }
-    }
+
 }

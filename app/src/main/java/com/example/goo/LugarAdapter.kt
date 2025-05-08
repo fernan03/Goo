@@ -18,9 +18,9 @@ class LugarAdapter(private val lugares: List<Lugar>, private val onItemClick: (L
         val lugar = lugares[position]
 
         holder.binding.apply {
-            nombreLugar.text = lugar.nombre
-            descripcionCorta.text = lugar.descripcionCorta
-            imagenLugar.setImageResource(lugar.imagenResId)
+            nombreLugar.text = lugar.id
+            rotacion.text = lugar.rotacion
+            orbita.text = lugar.orbita
 
             root.setOnClickListener {
                 onItemClick(lugar)
